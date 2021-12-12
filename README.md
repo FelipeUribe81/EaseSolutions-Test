@@ -48,3 +48,6 @@ You, in the terminal (bash, cmd, etc) must be located in the 'code' folder once 
 Located in the 'code' folder you execute the file 'app.py' as follows:
 
 `python app.py "name_of_input.txt"`
+
+![image](https://user-images.githubusercontent.com/66666430/145697558-2c841bce-d81f-49d6-b0e6-96f5ba9b2b1e.png)
+
