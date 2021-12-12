@@ -60,7 +60,6 @@ class challenge:
 
 
         drop = current - self.map[i][j]
-        #print(path.split(' '))
         """
         It is validated if the number of visited is greater than the one set in the global variable, by default, it is set as 0
         and the local number is initialized with 1. 
@@ -79,25 +78,21 @@ class challenge:
 
 
     def searchPath(self) -> None:
-        count = 0
         """
         We go through the matrix in order and one by one evaluating the correct path.
         """
         for i in range(self.n):
             for j in range(self.m):
                 """
-                In order to avoid going through sections of previously seen roads and to save time and movements, we 
-                and to save time and movements, the position smaller than the current size of the path is omitted.
+                To avoid passing through sections of roads already seen and to save time and movement, 
+                the path is omitted in position if it is smaller than the actual size of the path.
                 """
                 if (self.steps) < self.map[i][j]:
-                    #count += 1
                     self.movement(i, j, 1, self.map[i][j], f'{self.map[i][j]}')
         self.path = self.path.replace(' ', '-')
-        #print(count)
 
 if __name__ == "__main__":
     file = sys.argv[1]
-    print(file)
     app = challenge(file)
     app.searchPath()
     print(f'The path is: {app.path}\nThe steps and drop are: {app.steps}, {app.drop}')
